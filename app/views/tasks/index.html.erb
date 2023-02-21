@@ -5,10 +5,11 @@
   <div class="text-start border-bottom pt-3 pb-3">
     <ul>
       <% @tasks.each do |task| %>
-        <li>
-          <%= link_to "#{task.title}", task_path(task), :class => 'btn btn-success mb-2' %>
-          <% end %>
-        </li>
+          <li>
+            <%= task.completed %>
+            <%= link_to "#{task.title}", task_path(task), :class => 'btn btn-success mb-2' %>
+            <% end %>
+          </li>
       </ul>
 
   </div>
